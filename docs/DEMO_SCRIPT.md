@@ -23,3 +23,8 @@ Do not fabricate a successful payment or edit an error into a success. Complete 
 - Use only footage and assets that the entrant owns or has permission to publish.
 
 If sandbox credentials are still missing, a planning-only walkthrough can be an internal progress video. It is not the finished contest demo and must not be presented as verified PayPal checkout.
+
+
+## New cinematic cut (Nov 9)
+
+For the preferred competition-optimized cut, use [VIDEO_CREATIVE_DIRECTION.md](VIDEO_CREATIVE_DIRECTION.md) and [VOICEOVER_FINAL.md](VOICEOVER_FINAL.md), with original editorial assets in [assets/demo](../assets/demo/). This earlier script remains a simpler fallback. The real sandbox-capture and truthful-footage requirements apply to **both**. Repository visibility is now public and does not require further TinyFish repairs.
