@@ -38,3 +38,5 @@ Produce a valid final video artifact if prerequisites permit, reusable source au
 **The owner changed `XJR1984/XJR1984-clearcart` to PUBLIC. Connected GitHub metadata now confirms `visibility: public`. STOP TinyFish and all other agents' repository-visibility repair attempts. Verify public access/license read-only once, then proceed.**
 
 The owner's desired video direction and final handoff now exist in `docs/COMPETITION_STRATEGY.md`, `docs/VIDEO_CREATIVE_DIRECTION.md`, `docs/VOICEOVER_FINAL.md`, `docs/DEVPOST_OPTIMIZED_DRAFT.md`, and `docs/CODEX_FINAL_HANDOFF.md`. Reuse original SVG assets under `assets/demo/`. Use highest available supported reasoning quality (Astra 6 Ultra only if selectable); never claim that merely mentioning a model setting changed it. **Execution remains separate from this documentation update.**
+
+Additional prepared materials: `docs/JUDGES_QUICKSTART.md`, `docs/YOUTUBE_PUBLISHING_PACK.md`, `assets/demo/shotlist.json`, and `assets/demo/architecture.svg`. The architecture SVG has a currently accurate 'real sandbox capture not yet verified' label. Update it if real provider evidence supersedes this status before it goes into final media.
