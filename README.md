@@ -50,6 +50,13 @@ The project has no production merchant inventory, taxes, shipping, fulfillment, 
 - [Draft Devpost description](docs/SUBMISSION_DRAFT.md)
 - [Short demo script](docs/DEMO_SCRIPT.md)
 - [Official source links](docs/SOURCES.md)
+- [Judge-focused competition strategy](docs/COMPETITION_STRATEGY.md)
+- [Cinematic video creative brief](docs/VIDEO_CREATIVE_DIRECTION.md)
+- [Proposed narration and captions](docs/VOICEOVER_FINAL.md)
+- [Optimized Devpost submission copy](docs/DEVPOST_OPTIMIZED_DRAFT.md)
+- [Cloud-only video execution runbook](docs/CLOUD_DEMO_RUNBOOK.md)
+- [Final Codex execution handoff](docs/CODEX_FINAL_HANDOFF.md)
+- [Original opening and closing artwork and thumbnail](assets/demo/)
 
 Before submitting: verify personal eligibility, join Devpost, test a real sandbox transaction, publish the source with this MIT license, record a public YouTube demo under three minutes, and submit the entry. The draft contains placeholders so incomplete steps cannot be mistaken for verified results.
 
