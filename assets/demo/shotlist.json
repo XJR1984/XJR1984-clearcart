@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "project": "ClearCart",
+  "competition": "PayPal AI Hackathon 2026",
+  "durationSecondsTarget": 156,
+  "hardMaxSecondsExclusive": 180,
+  "allFootageMustBeAuthentic": true,
+  "publicGitHubRepo": "https://github.com/XJR1984/XJR1984-clearcart",
+  "actualSandboxCaptureVerified": false,
+  "verificationStatus": "pending",
+  "notes": "This is an editorial plan, not a rendered film. Do not change verified fields to true without real provider evidence. Times are guides; re-time against actual recorded footage and exact voiceover. Do not use mock UI, fake checkout receipts, proprietary music or trademarks.",
+  "shots": [
+    {
+      "id": "hook",
+      "startSeconds": 0,
+      "endSeconds": 9,
+      "source": "assets/demo/opening.svg",
+      "kind": "editorial_title",
+      "screenText": "SHOPPING SHOULD START WITH YOU.",
+      "voiceover": "hook",
+      "needsRealCapture": false
+    },
+    {
+      "id": "input",
+      "startSeconds": 9,
+      "endSeconds": 23,
+      "source": "real_browsershot_input",
+      "kind": "authentic_app_footage",
+      "screenText": "ONE NEED.",
+      "voiceover": "intro",
+      "needsRealCapture": true
+    },
+    {
+      "id": "ai",
+      "startSeconds": 23,
+      "endSeconds": 48,
+      "source": "real_browsershot_plan",
+      "kind": "authentic_app_footage",
+      "screenText": "A PLAN YOU CAN EXPLAIN.",
+      "voiceover": "classifier_optimizer",
+      "needsRealCapture": true
+    },
+    {
+      "id": "explain",
+      "startSeconds": 48,
+      "endSeconds": 70,
+      "source": "real_browsershot_item_reasons",
+      "kind": "authentic_app_footage",
+      "screenText": "EVERY DOLLAR ACCOUNTED FOR.",
+      "voiceover": "explainability",
+      "needsRealCapture": true
+    },
+    {
+      "id": "change",
+      "startSeconds": 70,
+      "endSeconds": 93,
+      "source": "real_browsershot_owned_items_budget",
+      "kind": "authentic_app_footage",
+      "screenText": "WHAT YOU OWN CHANGES WHAT YOU NEED.",
+      "voiceover": "adaptation",
+      "needsRealCapture": true
+    },
+    {
+      "id": "sandbox",
+      "startSeconds": 93,
+      "endSeconds": 135,
+      "source": "REAL_VERIFIED_PAYPAL_SANDBOX_CAPTURE_REQUIRED",
+      "kind": "authentic_app_and_provider_footage",
+      "screenText": "YOU ALWAYS APPROVE.",
+      "voiceover": "paypal",
+      "needsRealCapture": true,
+      "gate": "Do not fabricate capture; provider-approved real sandbox only; mask credentials."
+    },
+    {
+      "id": "closing_case",
+      "startSeconds": 135,
+      "endSeconds": 151,
+      "source": "real_checkout_outcome_or_truthful_verified_architecture",
+      "kind": "authentic_app_or_editorial",
+      "screenText": "INTENT → PLAN → APPROVAL.",
+      "voiceover": "impact",
+      "needsRealCapture": true,
+      "gate": "Only use success footage if real provider returned COMPLETED status and amount was confirmed. An editorial architecture frame must not imply success."
+    },
+    {
+      "id": "outro",
+      "startSeconds": 151,
+      "endSeconds": 156,
+      "source": "assets/demo/closing.svg",
+      "kind": "editorial_title",
+      "screenText": "YOUR NEED. YOUR LIMIT. YOUR CALL.",
+      "voiceover": "endtag",
+      "needsRealCapture": false
+    }
+  ]
+}
