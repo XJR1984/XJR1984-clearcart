@@ -44,4 +44,4 @@ PayPal's [official setup guide](https://developer.paypal.com/api/rest/) explains
 
 ## Current handoff status
 
-The user confirmed creation of the PayPal Developer account, Devpost account, and GitHub repository on November 9, 2026. The repository's exact URL/access remains to be resolved. Joining the contest, the entrant checks, public source publication, public video upload, genuine PayPal sandbox verification, and final Devpost submission have not been established. Use the README's latest verification record for executed tests and deployment status.
+The user confirmed creation of the PayPal Developer account, Devpost account, and GitHub repository, and confirmed entrant eligibility on November 9, 2026. The source is uploaded to [XJR1984/XJR1984-clearcart](https://github.com/XJR1984/XJR1984-clearcart). It remains private because the GitHub integration rejected changing visibility (HTTP 403). Joining the contest, public source visibility, public video upload, genuine PayPal sandbox verification, and final Devpost submission remain pending. Use the README's latest verification record for executed tests and deployment status.

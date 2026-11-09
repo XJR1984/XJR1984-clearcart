@@ -1,6 +1,6 @@
 # ClearCart — Devpost submission draft
 
-**Not submitted.** The text below describes the implemented prototype and its verified limits. A genuine PayPal sandbox transaction, public source verification, a public YouTube demo, and the entrant checks must be completed before treating the entry as ready. Do not replace pending evidence with simulated results.
+**Not submitted.** The text below describes the implemented prototype and its verified limits. The user confirmed entrant eligibility on November 9, 2026 and authorized final submission. A genuine PayPal sandbox transaction, public source visibility, and a public YouTube demo must still be completed before treating the entry as ready. Do not replace pending evidence with simulated results.
 
 ## Project fields
 
@@ -56,11 +56,12 @@ ChatGPT/Codex assisted with research, implementation, tests, training examples, 
 
 ## Final verification checklist — keep separate from the project description
 
-- [ ] Verify the repository is publicly accessible and includes the MIT license, complete source, and working run instructions. A hosted demo does not replace the public-source requirement.
+- [x] Upload the MIT license, complete source, tests, and run instructions to the user's specified repository. Source upload succeeded on November 9, 2026.
+- [ ] Make the repository publicly accessible. The GitHub integration rejected the visibility change with HTTP 403; signed-in owner access is needed. A hosted demo does not replace the public-source requirement.
 - [ ] Complete a genuine sandbox connection, buyer approval, capture, and transaction confirmation. Record the date and outcome without secrets.
 - [ ] Inspect the final build in a real browser and correct any observed problems.
 - [ ] Publish an actual-functionality video under three minutes on YouTube and insert its public URL above. Do not show credentials or substitute a simulated payment for a real sandbox result.
-- [ ] Confirm the entrant's age, residence, conflicts, rights, and other eligibility facts against the [official rules](https://paypalaihackathon.devpost.com/rules). Account creation alone does not establish eligibility.
+- [x] Obtain the entrant's confirmation of eligibility against the [official rules](https://paypalaihackathon.devpost.com/rules). The user confirmed “I meet the eligibility requirements” on November 9, 2026; this records their statement, not independent identity verification.
 - [ ] Join the contest, complete the English submission fields, and select only prize categories whose requirements the project actually meets.
 - [ ] Submit before **November 12, 2026 at noon Pacific (20:00 UTC)** and retain the confirmation and entry URL. Keep the submitted build available through judging.
 
