@@ -44,7 +44,11 @@ This is an editing plan, **not a claim that specific checkout footage exists**. 
 
 - `assets/demo/opening.svg`: original vector 16:9 opening, authorized to reuse in the video.
 - `assets/demo/closing.svg`: original vector 16:9 ending.
-- `assets/demo/thumbnail.svg`: original editorial title artwork for YouTube; export to 1280x720 PNG/JPEG before upload. Never imply visualized dashboard/checkout is a real screenshot when it isn't.
+- `assets/demo/thumbnail.svg`: original editorial title artwork for YouTube; export to 1280x720 PNG/JPEG before upload.
+- `assets/demo/architecture.svg`: technical storyboard slide with accurate bounded classifier, optimizer and explicit PayPal approval; it currently labels real capture as unverified and **must be updated if used after real provider evidence is obtained**.
+- `assets/demo/shotlist.json`: machine-readable 156-second storyboard with real-footage gates.
+- `docs/YOUTUBE_PUBLISHING_PACK.md`: original video metadata and publication checklist.
+- `docs/JUDGES_QUICKSTART.md`: judge-oriented installation and evaluation pathway. Never imply visualized dashboard/checkout is a real screenshot when it isn't.
 - `docs/DEVPOST_OPTIMIZED_DRAFT.md`: judge-ready written submission with unverified gate explicitly labeled.
 - `docs/CODEX_FINAL_HANDOFF.md`: concise final execution instructions.
 
