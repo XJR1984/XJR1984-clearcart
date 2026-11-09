@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" role="img" aria-label="ClearCart animated title artwork — From intention to intelligent checkout">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#090F1F"/><stop offset=".62" stop-color="#101C2B"/><stop offset="1" stop-color="#06101D"/></linearGradient>
+<linearGradient id="aura" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#D7F35C"/><stop offset=".58" stop-color="#68DDAA"/><stop offset="1" stop-color="#22D3EE"/></linearGradient>
+<radialGradient id="glow"><stop stop-color="#22D3EE" stop-opacity=".28"/><stop offset="1" stop-color="#22D3EE" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse"><path d="M64 0H0V64" fill="none" stroke="#7C9AAC" stroke-opacity=".1" stroke-width="1"/></pattern>
+<filter id="blur"><feGaussianBlur stdDeviation="50"/></filter>
+<filter id="smglow"><feGaussianBlur stdDeviation="8"/></filter>
+</defs>
+<rect width="1920" height="1080" fill="url(#bg)"/><rect width="1920" height="1080" fill="url(#grid)"/>
+<circle cx="1615" cy="500" r="540" fill="url(#glow)"/>
+<path d="M1140 170 C1445 118,1720 224,1710 506 C1703 762,1430 940,1168 794" fill="none" stroke="url(#aura)" stroke-width="2.5" opacity=".45"/>
+<path d="M1232 260 C1506 165,1692 345,1630 555 C1568 770,1313 810,1165 667" fill="none" stroke="#D7F35C" stroke-width="2" opacity=".65"/>
+<circle cx="1454" cy="531" r="193" fill="none" stroke="#A3FCC9" stroke-width="1.5" opacity=".48"/>
+<circle cx="1454" cy="531" r="120" fill="none" stroke="#22D3EE" stroke-width="2" opacity=".65"/>
+<circle cx="1454" cy="531" r="40" fill="#D7F35C" filter="url(#smglow)" opacity=".65"/><circle cx="1454" cy="531" r="27" fill="#D7F35C"/>
+<path d="M1380 531H1528M1454 457V605" stroke="#090F1F" stroke-width="7" stroke-linecap="round"/>
+<text x="126" y="125" font-family="Arial,sans-serif" fill="#F7F6EF" font-size="43" font-weight="800" letter-spacing="-1.5">ClearCart<tspan fill="#D7F35C">.</tspan></text>
+<rect x="126" y="212" width="245" height="37" rx="18" fill="#D7F35C" opacity=".13" stroke="#D7F35C" stroke-opacity=".5"/>
+<text x="148" y="237" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#D7F35C" letter-spacing="2.5">INTENT-LED COMMERCE</text>
+<text x="126" y="400" font-family="Arial,sans-serif" font-size="111" fill="#F7F6EF" letter-spacing="-5.5" font-weight="800">SHOPPING</text>
+<text x="126" y="520" font-family="Arial,sans-serif" font-size="111" fill="#F7F6EF" letter-spacing="-5.5" font-weight="800">SHOULD START</text>
+<text x="126" y="640" font-family="Arial,sans-serif" font-size="111" fill="#D7F35C" letter-spacing="-5.5" font-weight="800">WITH YOU.</text>
+<rect x="126" y="696" width="560" height="2" fill="url(#aura)"/>
+<text x="126" y="765" fill="#BED0D7" font-family="Arial,sans-serif" font-size="32">From intention to intelligent checkout.</text>
+<text x="126" y="971" fill="#77909A" font-family="Arial,sans-serif" font-size="19" letter-spacing="3">DESCRIBE  /  PLAN  /  REVIEW  /  APPROVE</text>
+<text x="1780" y="972" fill="#9AB3BD" font-family="Arial,sans-serif" font-size="19" text-anchor="end">DEMO / SANDBOX</text>
+</svg>
