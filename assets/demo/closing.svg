@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" role="img" aria-label="ClearCart closing title with Your need, Your limit, Your call">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#090F1F"/><stop offset=".62" stop-color="#101C2B"/><stop offset="1" stop-color="#06101D"/></linearGradient>
+<linearGradient id="aura" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#D7F35C"/><stop offset=".58" stop-color="#68DDAA"/><stop offset="1" stop-color="#22D3EE"/></linearGradient>
+<radialGradient id="glow"><stop stop-color="#22D3EE" stop-opacity=".28"/><stop offset="1" stop-color="#22D3EE" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse"><path d="M64 0H0V64" fill="none" stroke="#7C9AAC" stroke-opacity=".1" stroke-width="1"/></pattern>
+<filter id="blur"><feGaussianBlur stdDeviation="50"/></filter>
+<filter id="smglow"><feGaussianBlur stdDeviation="8"/></filter>
+</defs>
+<rect width="1920" height="1080" fill="url(#bg)"/><rect width="1920" height="1080" fill="url(#grid)"/>
+<circle cx="960" cy="520" r="530" fill="url(#glow)" opacity=".8"/>
+<circle cx="960" cy="498" r="297" fill="none" stroke="#22D3EE" stroke-opacity=".22" stroke-width="2"/>
+<circle cx="960" cy="498" r="345" fill="none" stroke="#D7F35C" stroke-opacity=".2" stroke-width="2" stroke-dasharray="6 15"/>
+<path d="M170 780H1750" stroke="url(#aura)" stroke-width="2" opacity=".5"/>
+<text x="960" y="414" font-family="Arial,sans-serif" font-size="116" fill="#F7F6EF" font-weight="800" letter-spacing="-5" text-anchor="middle">ClearCart<tspan fill="#D7F35C">.</tspan></text>
+<text x="960" y="545" font-family="Arial,sans-serif" font-size="48" fill="#D7F35C" font-weight="700" letter-spacing="2" text-anchor="middle">YOUR NEED. YOUR LIMIT. YOUR CALL.</text>
+<text x="960" y="625" font-family="Arial,sans-serif" font-size="29" fill="#B8CCD6" text-anchor="middle">From intention to intelligent checkout.</text>
+<text x="960" y="836" font-family="Arial,sans-serif" font-size="21" fill="#91A6B2" text-anchor="middle" letter-spacing="3">AI-ASSISTED PLANNING  ·  HUMAN-APPROVED PAYPAL SANDBOX</text>
+<text x="960" y="936" font-family="Arial,sans-serif" font-size="18" fill="#788B98" text-anchor="middle">Prototype · Illustrative catalog · Test transactions only</text>
+</svg>
