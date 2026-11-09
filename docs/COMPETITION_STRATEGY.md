@@ -74,3 +74,8 @@ An adequate, complete and verified demo **beats** an extraordinary but unfinishe
 - https://paypalaihackathon.devpost.com/rules
 - https://paypalaihackathon.devpost.com/
 - https://paypalaihackathon.devpost.com/details/faqs
+
+
+## Completed preparation assets
+
+The repo now has [original title/thumbnail/architecture graphics](../assets/demo/), a [machine-readable shot plan](../assets/demo/shotlist.json), [spoken narration](VOICEOVER_FINAL.md), [YouTube publishing copy](YOUTUBE_PUBLISHING_PACK.md), a [5-minute judge guide](JUDGES_QUICKSTART.md), and the [final Codex handoff](CODEX_FINAL_HANDOFF.md). These are **prepared material**, not proof that the recording, provider capture or Devpost upload occurred.
