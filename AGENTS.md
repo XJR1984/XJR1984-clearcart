@@ -32,3 +32,9 @@ Ship a truthful, reproducible, professional **cloud-created** functional demo vi
 ## Expected delivery
 
 Produce a valid final video artifact if prerequisites permit, reusable source automation, machine-readable QA/provenance summary, updated submission materials, and a concise readiness report. State exactly which steps are complete and which need owner authorization/access. Optimize for a credible submission by the deadline; do not let cinematic polish displace end-to-end functional truth.
+
+## Critical Nov 9 updates — public repo + prepared creative package
+
+**The owner changed `XJR1984/XJR1984-clearcart` to PUBLIC. Connected GitHub metadata now confirms `visibility: public`. STOP TinyFish and all other agents' repository-visibility repair attempts. Verify public access/license read-only once, then proceed.**
+
+The owner's desired video direction and final handoff now exist in `docs/COMPETITION_STRATEGY.md`, `docs/VIDEO_CREATIVE_DIRECTION.md`, `docs/VOICEOVER_FINAL.md`, `docs/DEVPOST_OPTIMIZED_DRAFT.md`, and `docs/CODEX_FINAL_HANDOFF.md`. Reuse original SVG assets under `assets/demo/`. Use highest available supported reasoning quality (Astra 6 Ultra only if selectable); never claim that merely mentioning a model setting changed it. **Execution remains separate from this documentation update.**
