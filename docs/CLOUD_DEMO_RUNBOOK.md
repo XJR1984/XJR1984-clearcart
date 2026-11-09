@@ -81,3 +81,7 @@ Official links:
 - https://paypalaihackathon.devpost.com/rules
 - https://paypalaihackathon.devpost.com/
 - https://developer.paypal.com/
+
+## Nov 9 owner confirmation / handoff update
+
+The owner personally set this GitHub repository public. Connected GitHub API reports `visibility: public` on `main`. **Treat privacy repair as closed; cancel/stop TinyFish or other visibility-fix attempts and perform one read-only anonymous accessibility/license check.** Continue with sandbox validation and film production. Source design package: [Competition strategy](COMPETITION_STRATEGY.md), [Creative direction](VIDEO_CREATIVE_DIRECTION.md), [Narration](VOICEOVER_FINAL.md), [Optimized Devpost draft](DEVPOST_OPTIMIZED_DRAFT.md), [Final handoff](CODEX_FINAL_HANDOFF.md), and [original editable SVG artwork](../assets/demo/).
