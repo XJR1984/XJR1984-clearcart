@@ -1,6 +1,6 @@
 # ClearCart — Devpost submission draft
 
-**Not submitted.** The text below describes the implemented prototype and its verified limits. The user confirmed entrant eligibility on November 9, 2026 and authorized final submission. A genuine PayPal sandbox transaction, public source visibility, and a public YouTube demo must still be completed before treating the entry as ready. Do not replace pending evidence with simulated results.
+**Not submitted.** The text below describes the implemented prototype and its verified limits. The user confirmed entrant eligibility on November 9, 2026 and authorized final submission. A genuine PayPal sandbox transaction and a public YouTube demo must still be completed before treating the entry as ready. The owner switched the repository to public on November 9, 2026; connected GitHub metadata confirms the change. Do not replace pending evidence with simulated results.
 
 ## Project fields
 
@@ -57,7 +57,7 @@ ChatGPT/Codex assisted with research, implementation, tests, training examples, 
 ## Final verification checklist — keep separate from the project description
 
 - [x] Upload the MIT license, complete source, tests, and run instructions to the user's specified repository. Source upload succeeded on November 9, 2026.
-- [ ] Make the repository publicly accessible. The GitHub integration rejected the visibility change with HTTP 403; signed-in owner access is needed. A hosted demo does not replace the public-source requirement.
+- [x] Make the repository publicly accessible. Owner changed visibility; connected GitHub metadata confirmed **PUBLIC** November 9, 2026. Confirm the MIT license and anonymous access read-only before submission. **Do not re-run TinyFish/GitHub visibility fixes.**
 - [ ] Complete a genuine sandbox connection, buyer approval, capture, and transaction confirmation. Record the date and outcome without secrets.
 - [ ] Inspect the final build in a real browser and correct any observed problems.
 - [ ] Publish an actual-functionality video under three minutes on YouTube and insert its public URL above. Do not show credentials or substitute a simulated payment for a real sandbox result.
@@ -66,3 +66,6 @@ ChatGPT/Codex assisted with research, implementation, tests, training examples, 
 - [ ] Submit before **November 12, 2026 at noon Pacific (20:00 UTC)** and retain the confirmation and entry URL. Keep the submitted build available through judging.
 
 **Evidence fields still to fill:** genuine sandbox test date/result; public video URL; final entry URL and submission confirmation. No entry acceptance or award has been secured.
+
+
+**Optimized judge-ready version:** [DEVPOST_OPTIMIZED_DRAFT.md](DEVPOST_OPTIMIZED_DRAFT.md). Original editorial assets and Codex handoff: [VIDEO_CREATIVE_DIRECTION.md](VIDEO_CREATIVE_DIRECTION.md), [CODEX_FINAL_HANDOFF.md](CODEX_FINAL_HANDOFF.md).
