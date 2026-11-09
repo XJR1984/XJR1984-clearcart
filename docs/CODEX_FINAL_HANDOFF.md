@@ -22,6 +22,9 @@ Pull the current `main` branch. Read `AGENTS.md`, GitHub Issue #1, and:
 - `docs/VIDEO_CREATIVE_DIRECTION.md` — cinematic timeline, visual design and shot selection
 - `docs/VOICEOVER_FINAL.md` — finished proposed voiceover/captions, to be retimed after real recording
 - `docs/DEVPOST_OPTIMIZED_DRAFT.md` — improved factually constrained submission draft
+- `docs/JUDGES_QUICKSTART.md` — 5-minute judge installation and test guide
+- `docs/YOUTUBE_PUBLISHING_PACK.md` — YouTube title, description, chapters and upload checklist
+- `assets/demo/shotlist.json` — structured, retimeable original shot plan
 - `assets/demo/opening.svg`, `assets/demo/closing.svg`, `assets/demo/thumbnail.svg` — original production-ready editable graphics
 - Existing `docs/DEMO_SCRIPT.md`, `docs/ELIGIBILITY.md`, `docs/VERIFICATION.md`, `README.md`
 
@@ -49,3 +52,5 @@ Do not touch OMEGA, Mozilla bounty, or Google bounty projects.
 - Remaining minimal user actions
 
 **User authorizes maximum cloud execution of the ClearCart submission work, not real-money transactions or paid services.**
+
+**Architecture graphic caution:** `assets/demo/architecture.svg` currently includes an explicit warning that a real sandbox capture is not yet verified. If provider verification is later obtained, update/remove that dated warning *before* using the artwork in a final video. Do not publish stale verification labels.
