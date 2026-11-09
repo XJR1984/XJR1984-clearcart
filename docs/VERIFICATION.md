@@ -32,3 +32,8 @@ The initial owner-private deployment succeeded on November 9, 2026 at 02:48 UTC,
 A separate authenticated request to the deployed planning API passed: a study request with a $16.98 budget returned two items totaling exactly $16.98. The hosted configuration correctly reported sandbox mode and unconfigured PayPal credentials. This verified hosted planning, not payment or browser appearance. The Site was still active when checked again at 06:09 UTC; no new payment or browser test was performed.
 
 Sites' local setup/source helper scripts were absent. The project uses the documented minimum Worker ESM format (`dist/server/index.js` with a default `fetch` handler), native Sites registration/version/deployment operations, and an authenticated Git push with an in-memory credential. No source credentials are stored in this repository.
+
+
+## Public-source status update — November 9, 2026
+
+The owner changed `XJR1984/XJR1984-clearcart` to **public**. The connected GitHub `get_repo` tool confirmed `visibility: public` and default branch `main`. This resolves the prior visibility-change obstacle. The GitHub API read was performed with an authenticated connection; an anonymous browse check should be completed read-only before the final entry. **Do not relaunch TinyFish or other agents to adjust repo privacy unless new, concrete contradictory evidence emerges.** This status update does not verify a sandbox payment, video, or contest submission.
