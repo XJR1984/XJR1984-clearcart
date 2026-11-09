@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f6ef">
+    <meta name="description" content="ClearCart turns an everyday need and a spending limit into an explained shopping plan. Try the demo catalog and PayPal sandbox checkout.">
+    <title>ClearCart — A little more considered.</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#planner">Skip to planner</a>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="/" aria-label="ClearCart home"><span class="brand-mark" aria-hidden="true">c<span></span></span>ClearCart<span class="brand-period">.</span></a>
+        <div class="header-right"><span class="status-dot" aria-hidden="true"></span><span>Small model. Thoughtful choices.</span><span class="sandbox-label">SANDBOX</span></div>
+      </header>
+
+      <main>
+        <section class="intro" aria-labelledby="page-title">
+          <div class="intro-copy"><p class="eyebrow"><span class="tiny-star" aria-hidden="true">✳</span> LESS GUESSWORK. MORE INTENTION.</p><h1 id="page-title">Start with a need.<br>Stay within your <span>means.</span></h1><p class="intro-description">An AI-assisted shopping plan that explains every choice, works with what you own, and respects your budget.</p></div>
+          <div class="intro-note"><span class="note-number">01 / 03</span><div class="note-line"></div><p>Tell us what you need.<br>Review the tradeoffs.<br><strong>You decide what’s next.</strong></p></div>
+        </section>
+
+        <details class="sandbox-setup" id="sandbox-setup">
+          <summary><span>Connect PayPal sandbox</span><span class="connection-status" id="connection-status">Checking connection…</span></summary>
+          <div class="setup-content">
+            <p class="setup-description" id="connection-description">Connect your sandbox app for a test checkout. No real money is used.</p>
+            <form id="connect-form" autocomplete="off">
+              <ol class="setup-steps"><li>Open the <a href="https://developer.paypal.com/dashboard/" target="_blank" rel="noopener noreferrer">PayPal Developer dashboard ↗</a>.</li><li>Choose <strong>Apps &amp; Credentials → Sandbox → Create App</strong>. Name it “ClearCart Sandbox.”</li><li>Copy that sandbox app’s client ID and secret below. These are API credentials, not your PayPal account password.</li></ol>
+              <div class="credential-grid"><div><label class="field-label" for="sandbox-client-id">Sandbox client ID</label><input id="sandbox-client-id" type="text" maxlength="512" autocomplete="off" autocapitalize="none" spellcheck="false" required></div><div><label class="field-label" for="sandbox-client-secret">Sandbox client secret</label><input id="sandbox-client-secret" type="password" maxlength="512" autocomplete="off" autocapitalize="none" spellcheck="false" required></div></div>
+              <p class="setup-privacy">Sent directly to this app over HTTPS, then exchanged with PayPal’s sandbox. The client secret is not saved. A short-lived access token stays in an HttpOnly browser cookie for at most one hour. Nothing is sent to this chat.</p>
+              <button class="button button-dark setup-connect" id="connect-button" type="submit">Connect sandbox for this browser</button>
+            </form>
+            <button class="text-button hidden" id="disconnect-button" type="button">Disconnect this browser</button>
+            <p id="connection-message" class="form-message" role="status" aria-live="polite"></p>
+          </div>
+        </details>
+
+        <section class="return-panel hidden" id="return-panel" aria-labelledby="return-heading" tabindex="-1">
+          <div><p class="eyebrow">PAYPAL SANDBOX</p><h2 id="return-heading">Finish your test checkout</h2><p id="return-description">Review your sandbox order, then complete the test payment.</p><p id="return-total" class="return-total"></p></div>
+          <button class="button button-dark" id="capture-button" type="button">Complete sandbox payment <span aria-hidden="true">↗</span></button>
+          <p id="return-message" class="return-message" role="status" aria-live="polite"></p>
+        </section>
+
+        <div class="workspace" id="planner">
+          <section class="brief-panel" aria-labelledby="brief-title">
+            <div class="section-heading"><span class="step-label">01</span><h2 id="brief-title">Your starting point</h2></div>
+            <form id="plan-form">
+              <label class="field-label" for="need">What are you getting ready for?</label>
+              <textarea id="need" name="need" maxlength="1000" rows="4" placeholder="I’m moving into my first apartment and need the basics to cook simple meals…" required></textarea>
+              <p class="field-hint">A specific everyday task gives the best starting point.</p>
+              <div class="budget-row"><div><label class="field-label" for="budget">Your spending limit</label><p class="field-hint">We’ll leave room when we can.</p></div><div class="currency-input"><span aria-hidden="true">$</span><input id="budget" name="budget" type="number" inputmode="decimal" min="0" max="10000" step="0.01" value="75" required aria-describedby="currency-label"><span id="currency-label">USD</span></div></div>
+              <fieldset class="examples"><legend class="field-label">Or start with a situation</legend><div class="example-grid">
+                <button type="button" class="example" data-scenario="cooking"><span aria-hidden="true">◒</span><span>First kitchen</span><span class="example-arrow" aria-hidden="true">↗</span></button>
+                <button type="button" class="example" data-scenario="study"><span aria-hidden="true">▱</span><span>Study corner</span><span class="example-arrow" aria-hidden="true">↗</span></button>
+                <button type="button" class="example" data-scenario="repairs"><span aria-hidden="true">⌁</span><span>Small repairs</span><span class="example-arrow" aria-hidden="true">↗</span></button>
+                <button type="button" class="example" data-scenario="lighting"><span aria-hidden="true">☼</span><span>Outage lighting</span><span class="example-arrow" aria-hidden="true">↗</span></button>
+              </div></fieldset>
+              <details class="owned-section"><summary><span>Already have a few things?</span><span class="owned-count" id="owned-count">0 selected</span></summary><p class="field-hint">Check items you own. We’ll leave them out of your cart.</p><div id="owned-list" class="owned-list"><p class="field-hint">Loading the demo catalog…</p></div></details>
+              <button id="plan-button" class="button button-lime" type="submit"><span id="plan-button-label">Make my plan</span><span aria-hidden="true">→</span></button>
+              <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+              <div class="form-footnote"><span aria-hidden="true">◇</span><span>Suggestions first. Checkout only when you choose.</span></div>
+            </form>
+          </section>
+
+          <section class="result-panel" aria-labelledby="plan-title" aria-busy="false" id="result-panel">
+            <div class="section-heading result-heading"><div class="heading-group"><span class="step-label">02</span><h2 id="plan-title">A plan with a purpose</h2></div><span class="small-label">DEMO CATALOG</span></div>
+            <div id="empty-state" class="empty-state"><div class="empty-art" aria-hidden="true"><div class="art-circle"></div><div class="art-card"><span></span><span></span><span></span><i>✓</i></div><div class="art-spark">✳</div></div><p class="empty-eyebrow">A GOOD PLAN STARTS SMALL</p><h3>A place for what matters.</h3><p>Give us a need and a limit. Your items, their purpose, and the tradeoffs will appear here.</p><div class="empty-pills"><span>Explained choices</span><span>Budget checked</span><span>You approve</span></div></div>
+            <div id="plan-content" class="hidden">
+              <div class="plan-summary"><div><p class="eyebrow" id="plan-intent">YOUR PLAN</p><h3 id="plan-summary-title">Useful essentials, considered.</h3></div><div class="intent-score"><span id="intent-confidence">—</span><small>model score</small></div></div>
+              <p class="plan-explanation" id="plan-explanation"></p><p class="field-hint">The model score compares the four supported categories; it is not a probability or an accuracy rating.</p>
+              <div class="budget-summary"><div class="budget-values"><span><small>Planned spend</small><strong id="total-value">$0.00</strong></span><span class="budget-limit"><small>of your budget</small><strong id="budget-value">$0.00</strong></span><span class="remaining-value"><small>Left over</small><strong id="remaining-value">$0.00</strong></span></div><div class="budget-track" role="progressbar" aria-label="Budget used" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="budget-progress"><span id="budget-fill"></span></div></div>
+              <div class="items-heading"><h4>Your considered cart</h4><span id="item-count"></span></div>
+              <ol id="item-list" class="item-list"></ol>
+              <div class="plan-notes hidden" id="plan-notes"><h4>Before you decide</h4><ul id="notes-list"></ul></div>
+              <div class="plan-actions"><button type="button" class="text-button" id="download-button">Save this plan <span aria-hidden="true">↓</span></button><span id="model-method" class="method-label"></span></div>
+              <div class="checkout-section"><div class="checkout-heading"><span class="step-label">03</span><div><h3>Make the next move.</h3><p>Review this cart before you continue.</p></div></div><button type="button" class="button button-dark" id="checkout-button" disabled><span id="checkout-button-label">Continue to PayPal sandbox</span><span aria-hidden="true">↗</span></button><p id="checkout-message" class="checkout-message" role="status" aria-live="polite">Checking sandbox availability…</p></div>
+            </div>
+          </section>
+        </div>
+
+        <section class="principles" aria-label="How ClearCart works"><div><span class="principle-number">01 / UNDERSTAND</span><h3>Your task comes first.</h3><p>A small trained model identifies the kind of everyday setup you’re planning.</p></div><div><span class="principle-number">02 / MAKE ROOM</span><h3>Every dollar has a job.</h3><p>The planner balances useful coverage against your limit and the items you already own.</p></div><div><span class="principle-number">03 / STAY IN CONTROL</span><h3>The final choice is yours.</h3><p>See the reasoning before choosing to continue to a PayPal test checkout.</p></div></section>
+      </main>
+      <footer class="site-footer"><a class="brand footer-brand" href="/">ClearCart<span class="brand-period">.</span></a><p>A working prototype with a synthetic catalog and illustrative prices.<br>Sandbox payments only. No real money or product fulfillment.</p><span class="footer-note">LESS, BUT CONSIDERED.</span></footer>
+    </div>
+  </body>
+</html>

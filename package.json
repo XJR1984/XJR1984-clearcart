@@ -1,0 +1,16 @@
+{
+  "name": "clearcart-budget-lab",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Budget-aware shopping plans and PayPal sandbox checkout",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env scripts/serve.mjs",
+    "test": "node scripts/test.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "npm test && npm run build"
+  },
+  "devDependencies": { "esbuild": "0.25.12" }
+}
