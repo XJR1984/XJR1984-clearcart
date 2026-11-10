@@ -21,7 +21,12 @@ jobs:
             -o export/ClearCart_Natural_Narrator.wav
           test $(stat -c%s export/ClearCart_Natural_Narrator.wav) -gt 150000
           file export/ClearCart_Natural_Narrator.wav
-          ffprobe -v error -show_entries format=duration,size -of default=noprint_wrappers=1 export/ClearCart_Natural_Narrator.wav
+          python3 - <<'PY'
+          import wave
+          with wave.open('export/ClearCart_Natural_Narrator.wav') as audio:
+              print('sample_rate', audio.getframerate())
+              print('duration_seconds', audio.getnframes()/audio.getframerate())
+          PY
           sha256sum export/ClearCart_Natural_Narrator.wav > export/voice_sha256.txt
       - name: Keep rendered narration as downloadable evidence
         uses: actions/upload-artifact@v4
