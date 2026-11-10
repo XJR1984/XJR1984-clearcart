@@ -41,12 +41,15 @@ try {
   if (!healthy) throw new Error('Application did not start on 127.0.0.1:3456');
   browser = await chromium.launch({ headless: true, args: ['--no-sandbox'] });
   const context = await browser.newContext({
-    viewport: { width: 1440, height: 900 },
-    screen: { width: 1440, height: 900 },
+    viewport: { width: 1600, height: 900 },
+    screen: { width: 1600, height: 900 },
     deviceScaleFactor: 1, locale: 'en-US', colorScheme: 'light',
-    recordVideo: { dir: path.join(out, 'raw'), size: { width: 1440, height: 900 } }
+    recordVideo: { dir: path.join(out, 'raw'), size: { width: 1600, height: 900 } }
   });
   const page = await context.newPage();
+  const videoStarted = Date.now();
+  const scenes = [];
+  const mark = name => scenes.push({name,seconds:Math.round((Date.now()-videoStarted)/100)/10});
   page.on('pageerror', error => errors.push('pageerror: ' + error.message));
   page.on('console', msg => { if (msg.type() === 'error') errors.push('console-error: ' + msg.text()); });
   await page.goto(base, { waitUntil: 'domcontentloaded', timeout: 30000 });
@@ -57,14 +60,17 @@ try {
   });
   observations.push('PayPal configured in credential-free CI: ' + Boolean(config.paypalConfigured));
   if (config.paypalConfigured) throw new Error('Unexpected PayPal credentials in recording environment');
+  mark('opening_app');
   await pause(4200);
   await page.screenshot({ path: path.join(out, '01-home.png'), fullPage: true });
+  mark('choose_scenario');
   await page.locator('[data-scenario="cooking"]').click();
   observations.push('Selected real first-kitchen scenario');
   await pause(3000);
   await page.locator('#plan-button').click();
   await page.locator('#plan-content').waitFor({ state: 'visible', timeout: 20000 });
   await page.locator('#item-list li').first().waitFor({ state: 'visible', timeout: 20000 });
+  mark('first_plan_visible');
   const firstItem = await page.locator('#item-list li h4').first().innerText();
   const firstTotal = await page.locator('#total-value').innerText();
   const firstBudget = await page.locator('#budget-value').innerText();
@@ -76,6 +82,7 @@ try {
   await pause(3100);
   await page.locator('#total-value').scrollIntoViewIfNeeded();
   await pause(2600);
+  mark('owned_item');
   await page.locator('.owned-section summary').click();
   const ownedRow = page.locator('.owned-option').filter({ hasText: firstItem }).first();
   await ownedRow.locator('input').check();
@@ -88,6 +95,7 @@ try {
   const afterOwned = await page.locator('#total-value').innerText();
   observations.push('After owned-item regeneration: ' + afterOwned);
   await page.screenshot({ path: path.join(out, '03-owned-item.png'), fullPage: true });
+  mark('adjust_budget');
   await page.locator('#budget').fill('45');
   await page.locator('#plan-button').click();
   await page.locator('#result-panel').scrollIntoViewIfNeeded();
@@ -100,7 +108,8 @@ try {
   observations.push('After lowered budget: ' + afterBudget + ' of ' + currentBudget);
   await page.screenshot({ path: path.join(out, '04-lowered-budget.png'), fullPage: true });
   await pause(4600);
-  await page.locator('#sandbox-setup summary').click();
+  mark('sandbox_setup');
+  await page.locator('#sandbox-setup').evaluate(el => { el.open = true; });
   await page.locator('#sandbox-setup').scrollIntoViewIfNeeded();
   observations.push('Showed real unconfigured PayPal sandbox UI; no real payment was attempted');
   await pause(4400);
@@ -108,6 +117,7 @@ try {
   await page.locator('#result-panel').scrollIntoViewIfNeeded();
   await pause(3200);
   const video = page.video();
+  mark('end');
   await context.close();
   rawVideoPath = await video.path();
   await browser.close(); browser = undefined;
@@ -119,6 +129,7 @@ try {
     paypalSandboxActualCaptureVerified: false,
     paypalPaymentSimulationShownAsReal: false,
     userComputerUsed: false, webcamUsed: false, userVoiceUsed: false,
+    scenes,
     screenshots: ['01-home.png', '02-initial-plan.png', '03-owned-item.png',
       '04-lowered-budget.png', '05-sandbox-unconfigured.png'],
     observations, browserErrors: errors, recordedVideo: path.relative(out, rawVideoPath),
