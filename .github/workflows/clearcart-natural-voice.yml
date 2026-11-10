@@ -1,0 +1,31 @@
+name: ClearCart natural narration asset
+on:
+  push:
+    paths:
+      - ".github/workflows/clearcart-natural-voice.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  materialize:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Fetch voice asset and validate format
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p export
+          curl --fail --location --retry 2 --silent --show-error \
+            'https://resource2.heygen.ai/text_to_speech/d7d7fb51ea2c4040af53f8b407db2973/a3a4aa242aaf431ea8ec2c4b3bb332fa/id=4527bb820e0e4b578b5533e8f377a7f2.wav' \
+            -o export/ClearCart_Natural_Narrator.wav
+          test $(stat -c%s export/ClearCart_Natural_Narrator.wav) -gt 150000
+          file export/ClearCart_Natural_Narrator.wav
+          ffprobe -v error -show_entries format=duration,size -of default=noprint_wrappers=1 export/ClearCart_Natural_Narrator.wav
+          sha256sum export/ClearCart_Natural_Narrator.wav > export/voice_sha256.txt
+      - name: Keep rendered narration as downloadable evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: ClearCart-Natural-Narrator
+          path: export/
+          retention-days: 7
