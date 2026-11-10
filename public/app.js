@@ -29,6 +29,8 @@ async function api(path, body) {
       if (expiredBrowserCookie) error.message = 'Your temporary sandbox connection expired. Connect again and start a new checkout.';
       state.config = { ...state.config, paypalConfigured: false, connectionMode: 'unconfigured' };
       renderConnection();
+      // An expired session needs a visible reconnection path.
+      $('#sandbox-setup').open = true;
       refreshCheckout();
     }
     throw error;
@@ -98,6 +100,7 @@ $('#connect-form').addEventListener('submit', async (event) => {
     renderConnection();
     message($('#connection-message'), `Connected for up to ${Math.floor(result.expiresIn / 60)} minutes. Make or review a plan, then start a new sandbox checkout.`);
   } catch (error) {
+    $('#sandbox-setup').open = true;
     message($('#connection-message'), error.message, true);
   } finally {
     $('#sandbox-client-id').disabled = false;
