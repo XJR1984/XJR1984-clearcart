@@ -45,6 +45,8 @@ jobs:
         env:
           PAYPAL_CLIENT_ID: ""
           PAYPAL_CLIENT_SECRET: ""
+      - name: Verify mobile, tablet and desktop layout
+        run: node scripts/demo/responsive-audit.mjs
       - name: Assemble professional captioned demo candidate
         run: node scripts/demo/assemble.mjs
       - name: Verify video decodes successfully
