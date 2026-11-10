@@ -32,7 +32,12 @@ jobs:
             sudo apt-get update
             sudo apt-get install -y librsvg2-bin
           fi
+          if ! command -v ffmpeg || ! command -v ffprobe; then
+            sudo apt-get update
+            sudo apt-get install -y ffmpeg
+          fi
           ffmpeg -version | head -n 2
+          ffprobe -version | head -n 2
       - name: Capture authentic UI with no payment credentials
         run: node scripts/demo/record.mjs
         env:
