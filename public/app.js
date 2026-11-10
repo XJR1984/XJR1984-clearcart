@@ -65,7 +65,9 @@ function renderConnection() {
     : 'Connect your sandbox app for a test checkout. No real money is used.';
   $('#connect-form').classList.toggle('hidden', available);
   $('#disconnect-button').classList.toggle('hidden', mode !== 'browser_session');
-  $('#sandbox-setup').open = !available;
+  // Keep setup collapsed until requested; do not crowd the primary planning experience.
+  // Preserve a user's open panel on connection errors so guidance remains visible.
+  if (available) $('#sandbox-setup').open = false;
 }
 
 $('#connect-form').addEventListener('submit', async (event) => {
