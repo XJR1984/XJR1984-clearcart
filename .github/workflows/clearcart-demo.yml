@@ -5,6 +5,8 @@ on:
     paths:
       - ".github/workflows/clearcart-demo.yml"
       - "scripts/demo/**"
+      - "public/**"
+      - "assets/demo/**"
 permissions:
   contents: read
 jobs:
