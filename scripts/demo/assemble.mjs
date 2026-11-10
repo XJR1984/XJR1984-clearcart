@@ -34,14 +34,11 @@ const t = n => {
   return String(h).padStart(2,'0')+':'+String(m).padStart(2,'0')+':'+String(s).padStart(2,'0')+','+String(ms).padStart(3,'0');
 };
 const cues=[
- [0,6.9,'Shopping should start with what you need.'],
- [intro, intro+clamp(scenes.first_plan_visible),'ClearCart translates a supported task and spending limit into a plan.'],
- [intro+clamp(scenes.first_plan_visible), intro+clamp(scenes.owned_item),'A small trained classifier and exact-cent optimizer explain each choice.'],
- [intro+clamp(scenes.owned_item), intro+clamp(scenes.adjust_budget),'Already own an item? ClearCart accounts for it when you regenerate.'],
- [intro+clamp(scenes.adjust_budget), intro+clamp(scenes.sandbox_setup),'Change the limit. The plan must still fit the budget.'],
- [intro+clamp(scenes.sandbox_setup), intro+browserDuration,'PayPal sandbox checkout requires separate credentials and buyer approval. No transaction is simulated here.'],
- [intro+browserDuration, intro+browserDuration+arch,'Human-approved PayPal sandbox integration. A genuine provider capture remains unverified.'],
- [finalDuration-outro,finalDuration-.1,'ClearCart. Your need. Your limit. Your call.']
+ [intro, intro+clamp(scenes.first_plan_visible),'Start with a real task and a spending limit.'],
+ [intro+clamp(scenes.first_plan_visible), intro+clamp(scenes.owned_item),'The trained classifier and budget optimizer explain each choice.'],
+ [intro+clamp(scenes.owned_item), intro+clamp(scenes.adjust_budget),'Already own an item? Exclude it and recalculate the plan.'],
+ [intro+clamp(scenes.adjust_budget), intro+clamp(scenes.sandbox_setup),'Reduce your budget. The proposed cart stays within your limit.'],
+ [intro+clamp(scenes.sandbox_setup), intro+browserDuration,'PayPal sandbox setup requires buyer approval. No payment is claimed here.']
 ].filter(x=>x[1]-x[0]>=0.35);
 const srt=cues.map(([start,end,txt],i)=>(i+1)+'\n'+t(start)+' --> '+t(end)+'\n'+txt+'\n').join('\n');
 await writeFile(path.join(dir,'editorial-captions.srt'),srt);
@@ -49,11 +46,11 @@ const final=path.join(dir,'ClearCart-Working-Demo-Candidate.mp4');
 const srtFile=path.join(dir,'editorial-captions.srt');
 const complex=[
   '[0:v]fps=30,scale=1920:1080,format=yuv420p,trim=duration=7,setpts=PTS-STARTPTS[v0]',
-  '[1:v]fps=30,scale=1920:1080,format=yuv420p,setpts=PTS-STARTPTS[v1]',
+  '[1:v]fps=30,scale=1920:1080,drawbox=x=0:y=976:w=iw:h=104:color=0x090F1F@0.85:t=fill,format=yuv420p,setpts=PTS-STARTPTS[v1]',
   '[2:v]fps=30,scale=1920:1080,format=yuv420p,trim=duration=10,setpts=PTS-STARTPTS[v2]',
   '[3:v]fps=30,scale=1920:1080,format=yuv420p,trim=duration=7,setpts=PTS-STARTPTS[v3]',
   '[v0][v1][v2][v3]concat=n=4:v=1:a=0[cut]',
-  "[cut]subtitles="+srtFile+":force_style='FontName=DejaVu Sans,FontSize=23,PrimaryColour=&H00F7F6EF&,BackColour=&HC0090F1F&,BorderStyle=3,Outline=1,MarginV=60'[out]"
+  "[cut]subtitles="+srtFile+":force_style='FontName=DejaVu Sans,FontSize=9,PrimaryColour=&H00F7F6EF&,OutlineColour=&H00000000&,BorderStyle=1,Outline=0,Shadow=0,MarginV=18,Alignment=2'[out]"
 ].join(';');
 exec('ffmpeg',[
   '-hide_banner','-loglevel','warning','-y',
