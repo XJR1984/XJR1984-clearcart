@@ -30,8 +30,8 @@ if(finalDuration>=180) throw new Error('Hard video time limit violated: '+finalD
 const scenes = Object.fromEntries(audit.scenes.map(x=>[x.name,x.seconds]));
 const clamp = n => Math.max(0,Math.min(browserDuration,Number(n)||0));
 const t = n => {
-  const m=Math.floor(n/60), s=Math.floor(n%60), ms=Math.round((n%1)*1000);
-  return String(m).padStart(2,'0')+':'+String(s).padStart(2,'0')+','+String(ms).padStart(3,'0');
+  const h=Math.floor(n/3600), m=Math.floor((n%3600)/60), s=Math.floor(n%60), ms=Math.round((n%1)*1000);
+  return String(h).padStart(2,'0')+':'+String(m).padStart(2,'0')+':'+String(s).padStart(2,'0')+','+String(ms).padStart(3,'0');
 };
 const cues=[
  [0,6.9,'Shopping should start with what you need.'],
@@ -46,7 +46,7 @@ const cues=[
 const srt=cues.map(([start,end,txt],i)=>(i+1)+'\n'+t(start)+' --> '+t(end)+'\n'+txt+'\n').join('\n');
 await writeFile(path.join(dir,'editorial-captions.srt'),srt);
 const final=path.join(dir,'ClearCart-Working-Demo-Candidate.mp4');
-const srtFile='artifacts/clearcart-demo/editorial-captions.srt';
+const srtFile=path.join(dir,'editorial-captions.srt');
 const complex=[
   '[0:v]fps=30,scale=1920:1080,format=yuv420p,trim=duration=7,setpts=PTS-STARTPTS[v0]',
   '[1:v]fps=30,scale=1920:1080,format=yuv420p,setpts=PTS-STARTPTS[v1]',
