@@ -40,7 +40,7 @@ For local development, the same form works on `http://127.0.0.1:3000` with an Ht
 
 See [VERIFICATION.md](docs/VERIFICATION.md) for executed checks and deployment status. Tests simulate PayPal responses. **A genuine PayPal sandbox transaction is still pending the user's sandbox connection and buyer approval.** There is no claim of a completed payment or contest-ready submission.
 
-Browser-based visual QA is pending because the managed Sites browser-control tool is unavailable in the build environment. UI event behavior is tested with a small Node DOM fixture; this is not a substitute for testing the page in a real browser.
+Real desktop-browser layout and interaction QA has now run in GitHub Actions Chromium on November 10 UTC. Five screenshots and a genuine application recording are archived in the successful release workflow; mobile QA, the owner-private hosted Site's public accessibility, and a genuine provider-approved PayPal sandbox payment are still unverified.
 
 The project has no production merchant inventory, taxes, shipping, fulfillment, refunds, durable order ledger, or public-service abuse controls. Use it as a sandbox demonstration. The current Site is owner-private. The contest always requires a public, openly licensed source repository. Judges also need either complete run instructions or an accessible working demo; a hosted demo does not replace the public-source requirement.
 
@@ -56,6 +56,7 @@ The project has no production merchant inventory, taxes, shipping, fulfillment, 
 - [Optimized Devpost submission copy](docs/DEVPOST_OPTIMIZED_DRAFT.md)
 - [Cloud-only video execution runbook](docs/CLOUD_DEMO_RUNBOOK.md)
 - [Final Codex execution handoff](docs/CODEX_FINAL_HANDOFF.md)
+- [Current release verification and outstanding gates](docs/RELEASE_STATUS_2026-11-09.md)
 - [Five-minute judge evaluation quickstart](docs/JUDGES_QUICKSTART.md)
 - [YouTube video publishing pack](docs/YOUTUBE_PUBLISHING_PACK.md)
 - [Machine-readable 2:36 video shotlist](assets/demo/shotlist.json)
