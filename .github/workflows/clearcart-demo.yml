@@ -1,0 +1,54 @@
+name: ClearCart functional demo release
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/clearcart-demo.yml"
+      - "scripts/demo/**"
+permissions:
+  contents: read
+jobs:
+  verify-and-record:
+    name: Test, record and render real application
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Checkout public source
+        uses: actions/checkout@v4
+      - name: Set up Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install source and check baseline
+        run: |
+          npm ci
+          npm test
+          npm run build
+      - name: Install headless browser and vector tools
+        run: |
+          npm install --no-save --package-lock=false playwright@1.56.1
+          npx playwright install --with-deps chromium
+          if ! command -v rsvg-convert; then
+            sudo apt-get update
+            sudo apt-get install -y librsvg2-bin
+          fi
+          ffmpeg -version | head -n 2
+      - name: Capture authentic UI with no payment credentials
+        run: node scripts/demo/record.mjs
+        env:
+          PAYPAL_CLIENT_ID: ""
+          PAYPAL_CLIENT_SECRET: ""
+      - name: Assemble professional captioned demo candidate
+        run: node scripts/demo/assemble.mjs
+      - name: Verify video decodes successfully
+        run: |
+          ffmpeg -hide_banner -loglevel error -i artifacts/clearcart-demo/ClearCart-Working-Demo-Candidate.mp4 -f null -
+          ffprobe -v error -show_entries format=duration,size -of default=noprint_wrappers=1 artifacts/clearcart-demo/ClearCart-Working-Demo-Candidate.mp4
+      - name: Upload video, images and evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ClearCart-cloud-demo-release
+          path: artifacts/clearcart-demo/
+          retention-days: 7
+          if-no-files-found: warn
