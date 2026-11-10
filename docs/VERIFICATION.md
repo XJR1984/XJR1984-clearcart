@@ -22,7 +22,7 @@ The connection form uses the app's existing private Sites access boundary. It do
 ## Not yet verified
 
 - Genuine PayPal sandbox account authentication, buyer approval, capture, and dashboard transaction confirmation. No server credentials have been configured; the new browser connection still needs the user's real sandbox test.
-- Real-browser layout, keyboard navigation, and mobile rendering. The managed Sites browser-control tool is unavailable. The [Sites skill](skill://plugin_connector_1p_689987207de08191979cf68eca2941c6/sites/SKILL.md) requires: “If `cua_repl.js` is unavailable, skip browser QA”. No substitute browser control was used.
+- **Mobile rendering and full keyboard/accessibility review** remain unverified. The managed Sites browser-control tool is unavailable; this limitation has been partially addressed by independent headless Chromium desktop QA in GitHub Actions, which is not equivalent to testing the owner-private hosted Site or every device.
 - Personal eligibility, joining the Devpost contest, public source/video publication, and final entry acceptance. Account creation was confirmed by the user; account existence is separate from a submitted entry.
 
 ## Hosting
@@ -37,3 +37,8 @@ Sites' local setup/source helper scripts were absent. The project uses the docum
 ## Public-source status update — November 9, 2026
 
 The owner changed `XJR1984/XJR1984-clearcart` to **public**. The connected GitHub `get_repo` tool confirmed `visibility: public` and default branch `main`. This resolves the prior visibility-change obstacle. The GitHub API read was performed with an authenticated connection; an anonymous browse check should be completed read-only before the final entry. **Do not relaunch TinyFish or other agents to adjust repo privacy unless new, concrete contradictory evidence emerges.** This status update does not verify a sandbox payment, video, or contest submission.
+
+
+## Independent cloud Chromium and video release verification — November 10, 2026 UTC
+
+Successful public-source GitHub Actions run: https://github.com/XJR1984/XJR1984-clearcart/actions/runs/42760840643. `npm ci`, `npm test`, `npm run build`, genuine headless Chromium UI walkthrough, video assembly, ffmpeg decode check, artifact upload all completed successfully. Browser errors: none reported. The video is **1920×1080 H.264, 66.000 seconds**, SHA-256 `80a3a67b9dfd4ba83c9ad60325ccb6ba3699d067108777fc9f4bf1cea1fb9a46`. A first-kitchen demo with a $75 budget yielded $44.94; excluding the already-owned small frying pan yielded $29.95; lowering the budget to $45 kept the cart at $29.95. The browser showed **unconfigured** PayPal sandbox setup, and **no live PayPal transaction was attempted or represented as completed**. The artifact is a working-planning demonstration candidate only, not a submitted public YouTube entry. Original video graphics and captions have been added. See [full release status](RELEASE_STATUS_2026-11-09.md).
