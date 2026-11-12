@@ -2,6 +2,8 @@
 
 Describe an everyday task and a budget. ClearCart suggests an explained cart, accounts for items you already own, and lets you approve a PayPal **sandbox** checkout. The catalog contains 32 original synthetic products with illustrative prices; no real goods are sold or shipped.
 
+**[Watch the public 72-second ClearCart demonstration on YouTube](https://www.youtube.com/watch?v=Q301FBN6Oto).** The recording shows a working budget-planning flow: $75 first-kitchen cap, a $44.94 proposed cart, then $29.95 after excluding an already-owned frying pan. These are illustrative catalog prices, not measured retailer savings. The PayPal sandbox setup is demonstrated; no independently verified buyer-approved live sandbox capture is represented.
+
 Built as a candidate entry for the [PayPal AI Hackathon](https://paypalaihackathon.devpost.com/). The submission deadline is **November 12, 2026 at noon Pacific**. This is a judged competition; completing this prototype does not earn a payment. No entry or award has been secured.
 
 ## Run it
